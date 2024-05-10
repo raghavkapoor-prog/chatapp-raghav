@@ -1,0 +1,51 @@
+[debug] [2024-05-10T12:06:13.641Z] ----------------------------------------------------------------------
+[debug] [2024-05-10T12:06:13.645Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2024-05-10T12:06:13.646Z] CLI Version:   13.8.2
+[debug] [2024-05-10T12:06:13.647Z] Platform:      win32
+[debug] [2024-05-10T12:06:13.648Z] Node Version:  v18.16.0
+[debug] [2024-05-10T12:06:13.650Z] Time:          Fri May 10 2024 17:36:13 GMT+0530 (India Standard Time)
+[debug] [2024-05-10T12:06:13.650Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-10T12:06:13.807Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-10T12:06:13.808Z] > authorizing via signed-in user (raghavkapoorn7@gmail.com)
+[debug] [2024-05-10T12:06:13.808Z] [iam] checking project chatapp-by-raghav for permissions ["firebase.projects.get","firebasedatabase.instances.update"]
+[debug] [2024-05-10T12:06:13.811Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatapp-by-raghav:testIamPermissions [none]
+[debug] [2024-05-10T12:06:13.811Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatapp-by-raghav:testIamPermissions x-goog-quota-user=projects/chatapp-by-raghav
+[debug] [2024-05-10T12:06:13.811Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatapp-by-raghav:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update"]}
+[debug] [2024-05-10T12:06:23.590Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatapp-by-raghav:testIamPermissions 200
+[debug] [2024-05-10T12:06:23.591Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/chatapp-by-raghav:testIamPermissions {"permissions":["firebase.projects.get","firebasedatabase.instances.update"]}
+[debug] [2024-05-10T12:06:23.594Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/chatapp-by-raghav [none]
+[debug] [2024-05-10T12:06:29.669Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/chatapp-by-raghav 200
+[debug] [2024-05-10T12:06:29.670Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/chatapp-by-raghav {"projectId":"chatapp-by-raghav","projectNumber":"697743752619","displayName":"Chatapp By Raghav","name":"projects/chatapp-by-raghav","resources":{"hostingSite":"chatapp-by-raghav","realtimeDatabaseInstance":"chatapp-by-raghav-default-rtdb"},"state":"ACTIVE","etag":"1_d7313547-cea7-4d6b-844c-e4386fbfff50"}
+[info] 
+[info] === Deploying to 'chatapp-by-raghav'...
+[info] 
+[info] i  deploying database 
+[info] i  database: checking rules syntax... 
+[debug] [2024-05-10T12:06:29.682Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/chatapp-by-raghav/locations/-/instances/chatapp-by-raghav-default-rtdb [none]
+[debug] [2024-05-10T12:06:37.736Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/chatapp-by-raghav/locations/-/instances/chatapp-by-raghav-default-rtdb 200
+[debug] [2024-05-10T12:06:37.737Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/chatapp-by-raghav/locations/-/instances/chatapp-by-raghav-default-rtdb {"name":"projects/697743752619/locations/asia-southeast1/instances/chatapp-by-raghav-default-rtdb","project":"projects/697743752619","databaseUrl":"https://chatapp-by-raghav-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2024-05-10T12:06:37.742Z] >>> [apiv2][query] PUT https://chatapp-by-raghav-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json dryRun=true
+[debug] [2024-05-10T12:06:37.742Z] >>> [apiv2][body] PUT https://chatapp-by-raghav-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2024-05-10T12:06:43.387Z] <<< [apiv2][status] PUT https://chatapp-by-raghav-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2024-05-10T12:06:43.387Z] <<< [apiv2][body] PUT https://chatapp-by-raghav-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"status":"ok"}
+[info] +  database: rules syntax for database chatapp-by-raghav-default-rtdb is valid 
+[info] i  database: releasing rules... 
+[debug] [2024-05-10T12:06:43.390Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/chatapp-by-raghav/locations/-/instances/chatapp-by-raghav-default-rtdb [none]
+[debug] [2024-05-10T12:06:51.290Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/chatapp-by-raghav/locations/-/instances/chatapp-by-raghav-default-rtdb 200
+[debug] [2024-05-10T12:06:51.290Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/chatapp-by-raghav/locations/-/instances/chatapp-by-raghav-default-rtdb {"name":"projects/697743752619/locations/asia-southeast1/instances/chatapp-by-raghav-default-rtdb","project":"projects/697743752619","databaseUrl":"https://chatapp-by-raghav-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[debug] [2024-05-10T12:06:51.291Z] >>> [apiv2][query] PUT https://chatapp-by-raghav-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 
+[debug] [2024-05-10T12:06:51.291Z] >>> [apiv2][body] PUT https://chatapp-by-raghav-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json "{\n  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */\n  \"rules\": {\n    \".read\": false,\n    \".write\": false\n  }\n}"
+[debug] [2024-05-10T12:06:55.792Z] <<< [apiv2][status] PUT https://chatapp-by-raghav-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2024-05-10T12:06:55.793Z] <<< [apiv2][body] PUT https://chatapp-by-raghav-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json {"status":"ok"}
+[info] +  database: rules for database chatapp-by-raghav-default-rtdb released successfully 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/chatapp-by-raghav/overview
+[debug] [2024-05-10T12:07:13.504Z] Error: Timed out.
+    at Timeout._onTimeout (C:\Users\Dell\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:267:49)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)
+[error] 
+[error] Error: An unexpected error has occurred.
